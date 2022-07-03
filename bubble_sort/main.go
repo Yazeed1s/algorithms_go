@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
-func bubble_sort(nums []int32) []int32 {
+func bubble_sort(nums []int) []int {
 
 	var swapped bool = true
 	for i := 0; i < len(nums); i++ {
@@ -23,8 +26,8 @@ func bubble_sort(nums []int32) []int32 {
 }
 
 func main() {
-	var array []int32 = []int32{8,5,3,4,1,7,2,6,0}
-	var sorted []int32 = bubble_sort(array)
+	var array = rand.Perm(100)
+	var sorted []int = bubble_sort(array)
 	fmt.Println("Sorted: ", sorted)
 
 }
